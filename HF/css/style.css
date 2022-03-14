@@ -1,0 +1,43 @@
+body {
+    background-color: #FFFFD4;
+    font-family: 'Roboto', sans-serif;
+}
+.box {
+    margin: auto;
+    width: 70%;
+    border: 2px solid brown;
+}
+ul {
+    list-style-type: none;
+    overflow: hidden;
+    
+}
+li {
+    float: left;   
+}
+li a{
+    text-decoration: none ;
+    display: block;
+    text-align: center;
+    padding: 5px;
+    width: 296px;
+    background-color: #FF7F2A;
+    color: white;
+}
+a:hover {
+    background-color:  #BF153F;
+}
+h2 {
+    text-align: center;
+    padding-top: 10px;
+}
+.content {
+    background-color: white;
+    color: #555;
+}
+.imgg {
+    float: right;
+    margin-left: 10px;
+    width: 30%;
+    overflow: hidden;  
+}
