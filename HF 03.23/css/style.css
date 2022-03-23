@@ -1,0 +1,245 @@
+* {
+    box-sizing: border-box; margin: 0; padding: 0;
+}
+html {
+    scroll-behavior: smooth
+}
+@import url('https://fonts.googleapis.com/css2?family=Hubballi&family=Montserrat:ital@1&family=Rubik&family=Smooch+Sans&display=swap');
+body {
+    font-family: 'Rubik', sans-serif; font-weight: 300; line-height: 1.2;
+    background: rgb(160,160,160);
+    background: linear-gradient(0deg, rgb(90, 90, 90) 0%, rgba(58,58,58,1) 100%);
+    color: whitesmoke;
+}
+img {
+    width: 100%;
+    border-radius: 25px;
+    box-shadow: 20px 30px 40px -20px rgba(0, 0, 0, .5);
+    filter: grayscale(100%);
+}
+img:hover {
+    filter: none;
+}
+h1 {
+    text-align: center;
+    grid-column: span 12;
+    margin: 10px 10px 10px 0;
+    font-weight: 600;
+    color: #F5E023;
+    text-transform: uppercase;
+}
+header {
+    background: rgb(40, 40, 40);
+    box-shadow: 0 30px 40px -20px rgba(0, 0, 0, .5);
+}
+header .grid {
+    align-items: center;
+    padding: 10px 0;
+}
+header .logo {
+    color: #F5E023;
+    grid-column: span 3;
+    font-weight: 500;
+    font-size: 25px;
+}
+header nav {
+    font-size: 18px;
+    grid-column: span 9;
+    justify-self: end;
+    text-transform: uppercase;
+}
+header a {
+    color: white;
+    text-decoration: none;
+    display: block;
+    padding: 10px;
+}
+header a:hover {
+    color: #F5E023;
+}
+header nav ul {
+    display: flex;
+    flex-flow: row wrap;
+    list-style: none;
+}
+.grid {
+    display: grid;
+    max-width: 1500px;
+    margin: 0 auto;
+    width: 90%;
+    grid-template-columns: repeat(12,1fr);
+    grid-template-rows: auto; 
+    gap: 30px;
+}
+@media(max-width:950px) {
+    header .grid {
+        grid-row-gap: 0;
+    }
+    header .logo {
+        grid-column: span 12;
+        text-align: center;
+    }
+    header nav {
+        grid-column: span 12;
+        justify-self:center
+    }
+}
+@media(max-width:950px){
+    .grid {
+        grid-column-gap: 0;
+    }
+}
+
+.football-articles , .volleyball-articles {
+    padding: 60px 0;
+}
+.football-articles .box1 {
+    grid-area: 2 / 1 / 4 / 9 ;
+}
+.football-articles .box2 {
+    grid-area: 2 / 9 / 3 / 13 ;
+}
+.football-articles .box3 {
+    grid-area: 3 / 9 / 4 / 13 ;
+}
+.football-articles .box1 img {
+    height: 660px;
+}
+
+@media(max-width:950px) {
+    .football-articles .box1 {
+        grid-area: 2 / 1 / 3 / 13 ;
+    }
+    .football-articles .box2 {
+        grid-area: 3 / 1 / 4 / 13 ;
+    }
+    .football-articles .box3 {
+        grid-area: 4 / 1 / 5 / 13 ;
+    }
+    .football-articles .box1 img {
+        height: 90%;
+    }
+}
+.handball-articles .box1 {
+    grid-area: 2 / 1 / 3 / 5 ;
+}
+.handball-articles .box2 {
+    grid-area: 3 / 1 / 4 / 5 ;
+}
+.handball-articles .box3 {
+    grid-area: 2 / 5 / 4 / 13 ;
+}
+.handball-articles .box3 img {
+    height: 700px;
+}
+@media(max-width:950px) {
+    .handball-articles .box1 {
+        grid-area: 2 / 1 / 3 / 13 ;
+    }
+    .handball-articles .box2 {
+        grid-area: 3 / 1 / 4 / 13 ;
+    }
+    .handball-articles .box3 {
+        grid-area: 4 / 1 / 5 / 13 ;
+    }
+    .handball-articles .box3 img {
+        height: 90%;
+    }
+}
+.volleyball-articles .box {
+    grid-column: span 4;
+}
+.volleyball-articles img {
+    height: 450px;
+}
+@media(max-width:950px) {
+    .volleyball-articles .box {
+        grid-column: span 12;
+}
+}
+.moresports-articles .box {
+    grid-column: span 6;
+}
+@media(max-width:950px) {
+    .moresports-articles .box {
+        grid-column: span 12;
+}
+}
+footer {
+    background: rgb(40, 40, 40);
+    padding: 30px 0;
+}
+footer .grid {
+    align-items: center;
+    padding: 10px 0;
+}
+footer .logo {
+    color: #F5E023;
+    grid-column: span 3;
+    font-size: 25px;
+    font-weight: 500;
+}
+
+footer .bungary {
+    grid-column: span 9;
+    justify-self: end;
+    color: white;
+    text-transform: uppercase;
+}
+@media(max-width:500px) {
+    footer .logo{
+        grid-column: span 12;
+    }
+    footer .bungary{
+        grid-column: span 12;
+    }
+}
+
+.article-title {
+    display: block;
+    text-decoration: none;
+    font-weight: 600;
+    font-size: 19px;
+    color: whitesmoke;
+    transition: 1.5s;
+}
+.article-title:hover {
+    color: #F5E023;
+    font-size: 180%;
+}
+.article-category {
+    background: #F5E023;
+    color: lightslategray;
+    text-decoration: none;
+    text-transform: uppercase;
+    padding: 2px 5px;
+    font-weight: 600;
+    display: inline-block;
+    margin: 0 0 5px 0 ;
+}
+.article-image {
+    display: block;
+}
+.article-image img {
+    display: block;
+    margin: 0 0 5px 0;
+}
+.moresports-articles .article-title {
+    font-size: 16px;
+    margin: 0 0 10px 0;
+}
+.gotopBtn{
+    position: fixed;
+    width: 40px;
+    height: 40px;
+    bottom: 30px;
+    right: 20px;
+    z-index: 99;
+    background: #F5E023;
+    color: lightslategray;
+    border: 1px solid lightslategray ;
+    border-radius: 40px;
+    text-align: center;
+    line-height: 50px;  
+}
+
