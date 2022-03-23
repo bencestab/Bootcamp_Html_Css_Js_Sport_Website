@@ -9,7 +9,7 @@ body {
     font-family: 'Rubik', sans-serif; font-weight: 300; line-height: 1.2;
     background: rgb(160,160,160);
     background: linear-gradient(0deg, rgb(90, 90, 90) 0%, rgba(58,58,58,1) 100%);
-    color: whitesmoke;
+    color: white;
 }
 img {
     width: 100%;
