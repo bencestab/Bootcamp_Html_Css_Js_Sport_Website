@@ -11,6 +11,12 @@ body {
     background: linear-gradient(0deg, rgb(90, 90, 90) 0%, rgba(58,58,58,1) 100%);
     color: white;
 }
+.logo img {
+    filter: none;
+    width: 26px;
+    height: 26px;
+
+}
 img {
     width: 100%;
     border-radius: 25px;
