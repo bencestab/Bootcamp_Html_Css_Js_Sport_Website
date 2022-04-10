@@ -1,0 +1,141 @@
+<script>
+
+
+    //    ------------------------------------ 1. ---------------------------------------
+    // multidimensional array (Többdimenziós tömb) = Összetettebb feladatok megoldásához az adatok egyszerűbb kezelése érdekében többdimenziós tömböket szoktak használni.
+
+    //     pl.  Ha például gyűjteni szeretnénk havonként és azon belül naponként a kiadásainkat. A kiadások számok, de a napokhoz rendelt indexek nehézkesek lennének, mert február 1-hez a 32-t, június 1-hez már a 152-es index tartozna. Egyszerűbb, ha a kiadásainkat két indexel azonosítjuk. Az egyik jelentheti a hónapot, a másik a napot. Ha már az évet is szeretnénk tárolni, akkor egy újabb index bevezetésére van szükségünk. 
+                                                 
+
+    var datum = [
+        [2001, 'Febr', '16'],
+        [2012, 'Jan', '23'],
+        [2019, 'Jun', '13'],
+        [2022, 'Dec', '5']];
+
+    alert(datum[1]);
+
+
+
+    Kimenetel:                                  /// Sokáig szenvedtem a zárójelek helytelen használata miatt....
+    ('2012, Jan, 23')
+
+
+    var datum = [
+        [2001, 'Febr', '16'],
+        [2012, 'Jan', '23'],
+        [2019, 'Jun', '13'],
+        [2022, 'Dec', '5']];
+
+    alert(datum[0][1]);
+
+
+    Kimenetel:
+    ('Febr')
+
+
+
+
+// -----------------------------------    2.   -------------------------------
+    let sum = 0;
+    const a_class = [150, 156, 178, 167, 153];
+    const b_class = [190, 139, 152, 169, 142];
+
+    let y = prompt("Melyik osztály átlagmagasságát szeretné megtudni? , a_class vagy b_class");
+
+    if (y == "a_class") {
+        for (let i = 0; i < a_class.length; i++) { sum += a_class[i]; }
+        alert(sum / a_class.length + " cm az a_osztály átlagos magassága");
+    }
+    else if  (y == "b_class")  {
+        for (let i = 0; i < b_class.length; i++) { sum += b_class[i]; }
+        alert(sum / b_class.length + " cm a b_osztály átlagos magassága");
+    }
+    else {
+        alert("Nincs ilyen osztály")
+    }
+
+
+// ----------------------------------- 3. --------------------------------------
+
+
+let alkalmazottak = [                                                               // Nem tudom hogyan lehetne, az összes bérköltségre 
+                                                                                    // hivatkozni, amelyik tömbön belül, programozó
+                                                                                    // a munkakör...
+    ["alice", "programozó", 140000],
+    ["bob", "programozó", 140000],
+    ["cecil", "tesztelő", 100000]
+    ];
+
+let x = prompt("Melyik munkakörre vonatkozóan számoljuk ki a havi bérköltségeket?", "programozó vagy tesztelő?")
+
+    if (x == "programozó") {
+        alert( alkalmazottak[0][2] + alkalmazottak[1][2] + ' költ a cég havonta, a programozók bérköltségeire.' )
+    } 
+    else if(x =="tesztelő") {
+        alert( alkalmazottak[2][2] + ' költ a cég havonta, a tesztelők bérköltségeire.')
+    }
+    else {
+        alert('Nincs ilyen pozíció')
+    };
+
+
+// --------------------------------------------- 4. ----------------------------------------------------
+
+
+
+var quantity = prompt("Hány jegyet szeretnél?");
+var quality = prompt("Milyen jegyet szeretnél?");
+
+console.log(quantity);
+console.log(quality);
+
+var types = {
+    student:250,
+    adult:300,
+    retired:280
+}
+var price = types[quality];
+
+if (price === undefined) {
+    alert("Nincs ilyen típusú jegy...")
+}
+else {
+
+   
+    var discount = quantity > 10 ? 0.9 : 1;
+    
+    var total = quantity * price * discount;
+}
+
+alert(total);
+
+
+
+
+</script>
+
+</body>
+
+</html>
+
+
+
+<!-- 
+    
+    1.Nézz utána a többdimenziós tömböknek (multidimensional array)!
+    tömb + elágazás
+
+    2.Két osztály tanulóinak magasságait tároljuk két tömbben. Kérdezd meg a felhasználótól, melyik osztály átlagos magasságát szeretné látni és a válaszának megfelelően jelenítsd meg az adott osztály átlagos magasságát!
+
+    3.Egy cég alkalmazottainak az adatait eltároltuk egy többdimenziós tömbben. Kérd be a felhasználótól, hogy melyik munkakörre vonatkoztatva írjuk ki, hogy mennyit költ a cég fizetésekre és jelenítsd meg a választ! Ha nem létezik a kért munkakör, írd ki, hogy nincs ilyen pozíció!
+
+    let alkalmazottak = [
+    // név, foglalkozás, havi bér
+    ["alice", "programozó", 140000],
+    ["bob", "programozó", 140000],
+    ["cecil", "tesztelő", 100000]
+    ];
+
+
+    4.Találj ki és írj egy életszerű példa programot, amelynek a megoldásához tömböt és elágazást kell használni! -->
