@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="hu">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+</body>
+</html>
+<script>
+// Az alábbi feladatsor egy hosszabb feladat részfeladatai, sorban.
+
+// 1.Kérj be egy n értéket.Ha nem szám, írd ki, hogy hibás input és kérd be újra, midaddig, amíg számot nem adott meg a felhasználó.
+
+// 2.Tölts fel egy t tömböt n elemmel.Az elemek csak számok lehetnek.Ha nem számot adott meg a felhasználó, írd ki, hogy hibás input 
+// és kérd be újra, midaddig, amíg számot nem adott meg a felhasználó.
+
+// 3.Kérd be, hogy pozitív vagy negatív számokat listázzunk.Ha nem a felsorolt értékek valamelyikét adta meg a felhasználó, írd ki,
+//  hogy hibás input és kérd be újra, midaddig, amíg nem a felsorolt értékek valamelyikét adta meg.
+
+// 4.Írd a konzolra a felahsználó választása alapján a tömb pozitív vagy negatív elemeit.Ha váalsztás alapján nincs mit kiírni
+// (pl.nincsenek pozitív számok), akkor írd ki, hogy nincsenek ilyen számok a tömbben.
+
+//  5.Írd ki a t tömb elemeinek összegét.
+
+
+
+
+let n = Number(prompt("Hány eleme legyen a tömbnek?"));
+
+while (isNaN(n)) {
+    alert("Hibás input")
+    n = Number(prompt("Kérem number értéket adjon meg! Hány eleme legyen a tömbnek?"))
+};
+
+
+let t = [];
+
+for (let i = 0; i < n ; i++) {
+    t[i] =Number(prompt("Adja meg az " + (i+1) + " . elemet."))
+}
+
+alert("A tömb elemei: " + t )
+
+let lista = (prompt("A pozitív vagy a negatív számokat listázzuk?","pozitív vagy negatív?"))
+let pos=[];
+let neg=[]; 
+
+
+t.forEach(function(item) {
+    if (item < 0) {
+        neg.push(item)
+    }
+    else {
+        pos.push(item)
+    }
+})
+
+while (lista !="pozitív" && lista != "negatív" ); {
+    alert("Hibás input.")
+    lista = prompt("Kérem adja meg helyesen, hogy a pozitív vagy a negatív számokat listázzuk?")
+}
+if (lista == "negatív") {
+    alert(neg)
+}
+else { alert(pos)
+}
+
+
+let ossz = 0;
+
+for(let i = 0; i < t.length; i++) {
+    ossz += t[i];
+}
+
+
+alert("A tömb elemeinek összege: " + ossz);
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</script>
