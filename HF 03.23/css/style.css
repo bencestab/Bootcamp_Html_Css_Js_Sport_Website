@@ -7,15 +7,9 @@ html {
 @import url('https://fonts.googleapis.com/css2?family=Hubballi&family=Montserrat:ital@1&family=Rubik&family=Smooch+Sans&display=swap');
 body {
     font-family: 'Rubik', sans-serif; font-weight: 300; line-height: 1.2;
-    background: rgb(160,160,160);
-    background: linear-gradient(0deg, rgb(90, 90, 90) 0%, rgba(58,58,58,1) 100%);
-    color: white;
-}
-.logo img {
-    filter: none;
-    width: 26px;
-    height: 26px;
-
+    background-image: url("../img/dark2.jpg");
+    /* background: linear-gradient(0deg, rgb(90, 90, 90) 0%, rgba(58,58,58,1) 100%); */
+    color: whitesmoke;
 }
 img {
     width: 100%;
@@ -59,9 +53,13 @@ header a {
     text-decoration: none;
     display: block;
     padding: 10px;
+    transition: 0.7s;
 }
 header a:hover {
     color: #F5E023;
+    font-size: 120%;
+    transition: 0.7s;
+
 }
 header nav ul {
     display: flex;
@@ -211,7 +209,7 @@ footer .bungary {
 }
 .article-title:hover {
     color: #F5E023;
-    font-size: 150%;
+    font-size: 180%;
 }
 .article-category {
     background: #F5E023;
@@ -247,5 +245,40 @@ footer .bungary {
     border-radius: 40px;
     text-align: center;
     line-height: 50px;  
+}
+
+#back_button{
+    background-color: #F5E023;
+    padding: 1vw;
+    border-radius: 20px;
+}
+.form_container{
+    width: 60%;
+    margin: auto;
+    padding-top: 10vw;
+    padding-bottom: 10vw;
+    border: 3px solid #000000;
+    border-radius: 25%;
+    border-radius: 20px;
+    display: flex;
+    flex-flow: column nowrap;
+    gap: 10px;
+    align-items: center;
+}
+.frame {
+    padding: 1vw;
+    border-radius: 20px;
+}
+form p{
+    display: block;
+    width: 70%;
+    margin: auto;
+}
+form .checkbox {
+    width: 70%;
+    margin: auto;
+}
+#GDPR {
+    color: antiquewhite;
 }
 

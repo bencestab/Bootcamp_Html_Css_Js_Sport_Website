@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="hu">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Foglalás</title>
+
+    <link rel="stylesheet" href="css/style.css">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link rel="icon" type="image" href="img/Logo.png">
+
+    <link href='https://ajax.googleapis.com/ajax/libs/jqueryui/1.12.1/themes/ui-lightness/jquery-ui.css'
+        rel='stylesheet'>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js">
+    </script>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.12.1/jquery-ui.min.js">
+    </script>
+
+
+
+
+
+</head>
+
+<body>
+    <script>
+        $(document).ready(function () {
+
+            $(function () {
+                $("#my_date_picker").datepicker();
+            });
+        })
+
+    </script>
+
+    <header>
+        <form>
+            <input type="button" id="back_button" value="Vissza az előző oldalra" onclick="history.back()">
+        </form>
+    </header>
+
+    <section>
+
+
+        <form action="" method="get">
+            <h1 class="h1mid"> Feliratkozás</h1>
+            <div class="form_container">
+
+                <div>
+                    <label for="lname">Vezetéknév:</label>
+                    <input type="text" id="lname" name="lname">
+                </div>
+
+                <div>
+                    <label for="fname">Keresztnév:</label>
+                    <input type="text" id="fname" name="fname">
+                </div>
+
+                <div>
+                    <label for="email">E-mail cím:</label>
+                    <input type="text" id="email" name="email">
+                </div>
+
+                <div>
+                    <p>
+                        A feliratkozom gomb megnyomásával elismerem, hogy elolvastam, megértettem és elfogadom az
+                        <a href="gdpr.html" id="GDPR">Adatvédelmi szabályzatot</a>, mely alapján az oldal az adataimat
+                        kezeli.
+                    </p>
+                </div>
+                <div class="checkbox">
+                    <label for="checkbox">Hozzájárulok ahhoz, hogy a megadott személyes adataimat a SB AG.
+                        – hozzájárulásom visszavonásáig – közvetlen üzletszerzési célra (tájékoztatás, közvélemény- vagy
+                        piackutatás, illetve egyéb tájékoztatás – sorsolás, tájékoztatók, kereskedelmi és marketing
+                        ajánlatok eljuttatására) felhasználja, és ezzel kapcsolatosan engem az általam megadott
+                        elérhetőségeken (így elektronikus levelezés útján) megkeressen, illetve részemre nyomtatott
+                        és/vagy online sajtótermékekkel kapcsolatos gazdasági reklámot küldjön. A hozzájárulás
+                        visszavonására az adatvédelmi tájékoztatóban foglaltak szerint van lehetőségem.</label>
+                    <input type="checkbox" id="checkbox" name="checkbox">
+                </div>
+
+
+                <div>
+                    <input type="submit" value="Feliratkozom">
+                </div>
+
+            </div>
+        </form>
+
+    </section>
+</body>
+
+</html>
