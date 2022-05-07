@@ -7,9 +7,8 @@ html {
 @import url('https://fonts.googleapis.com/css2?family=Hubballi&family=Montserrat:ital@1&family=Rubik&family=Smooch+Sans&display=swap');
 body {
     font-family: 'Rubik', sans-serif; font-weight: 300; line-height: 1.2;
-    background-image: url("../img/dark2.jpg");
-    /* background: linear-gradient(0deg, rgb(90, 90, 90) 0%, rgba(58,58,58,1) 100%); */
-    color: whitesmoke;
+    background-image: url("../img/dark1.jpg");
+    color: rgb(255, 255, 255);
 }
 img {
     width: 100%;
@@ -21,6 +20,7 @@ img:hover {
     filter: none;
 }
 h1 {
+    display: block;
     text-align: center;
     grid-column: span 12;
     margin: 10px 10px 10px 0;
@@ -31,6 +31,9 @@ h1 {
 header {
     background: rgb(40, 40, 40);
     box-shadow: 0 30px 40px -20px rgba(0, 0, 0, .5);
+    position: sticky;
+    top: 0;
+    z-index: 98;
 }
 header .grid {
     align-items: center;
@@ -57,7 +60,7 @@ header a {
 }
 header a:hover {
     color: #F5E023;
-    font-size: 120%;
+    font-size: 110%;
     transition: 0.7s;
 
 }
@@ -85,7 +88,8 @@ header nav ul {
     }
     header nav {
         grid-column: span 12;
-        justify-self:center
+        justify-self:center;
+        
     }
 }
 @media(max-width:950px){
@@ -108,6 +112,17 @@ header nav ul {
 }
 .football-articles .box1 img {
     height: 660px;
+}
+
+.football-articles,.handball-articles,.volleyball-articles,.moresports-articles {
+    visibility: hidden;
+    opacity: 0;
+    transition: 1s;
+}
+.football-articles.active,.handball-articles.active,.volleyball-articles.active,.moresports-articles.active {
+    visibility: visible;
+    opacity: 100;
+    
 }
 
 @media(max-width:950px) {
@@ -176,6 +191,7 @@ footer {
 footer .grid {
     align-items: center;
     padding: 10px 0;
+   
 }
 footer .logo {
     color: #F5E023;
@@ -183,19 +199,35 @@ footer .logo {
     font-size: 25px;
     font-weight: 500;
 }
+.map{
+    grid-column: span 6;
+}
 
 footer .bungary {
-    grid-column: span 9;
+    padding-left: 350px;
+    grid-column: span 3;
     justify-self: end;
     color: white;
     text-transform: uppercase;
 }
-@media(max-width:500px) {
+.bungary div {
+    padding: 10px;
+}
+.bungary div i{
+    padding-right: 30px;
+    color: #F5E023;
+}
+@media(max-width:900px) {
     footer .logo{
+        grid-column: span 12;
+        place-self: center ;
+    }
+    footer .map {
         grid-column: span 12;
     }
     footer .bungary{
         grid-column: span 12;
+        place-self: center;
     }
 }
 
@@ -204,12 +236,14 @@ footer .bungary {
     text-decoration: none;
     font-weight: 600;
     font-size: 19px;
-    color: whitesmoke;
-    transition: 1.5s;
+    color: #F5E023;
+    transition: 0.5s;
+    ;
 }
 .article-title:hover {
-    color: #F5E023;
-    font-size: 180%;
+    color: #ffbf00;
+    text-decoration:underline;
+    
 }
 .article-category {
     background: #F5E023;
@@ -231,20 +265,29 @@ footer .bungary {
 .moresports-articles .article-title {
     font-size: 16px;
     margin: 0 0 10px 0;
+    color: white;
 }
 .gotopBtn{
     position: fixed;
     width: 40px;
     height: 40px;
     bottom: 30px;
-    right: 20px;
+    right: 30px;
     z-index: 99;
     background: #F5E023;
-    color: lightslategray;
-    border: 1px solid lightslategray ;
+    color: rgb(0, 0, 0);
+    border: 3px solid rgb(0, 0, 0) ;
     border-radius: 40px;
     text-align: center;
-    line-height: 50px;  
+    line-height: 50px;
+    visibility: hidden;
+    opacity: 0;
+    transition: 1s;
+}
+.gotopBtn.active {
+    visibility: visible;
+    opacity: 100;
+    z-index: 99;
 }
 
 #back_button{
@@ -259,6 +302,7 @@ footer .bungary {
 }
 
 .form_container{
+    background-color: rgba(80, 80, 80, 0.71);
     width: 60%;
     margin: auto;
     padding-top: 10vw;
@@ -288,3 +332,27 @@ form .checkbox {
     color: antiquewhite;
 }
 
+.box,.box1 ,.box2, .box3 {
+    background-color: rgba(255, 255, 0, 0.5);
+    border-radius: 25px;
+    padding: 10px;
+}
+footer {
+    margin-top: 20px;
+    border-top-left-radius: 25px;
+    border-top-right-radius: 25px;
+}
+
+header {
+    border-bottom-left-radius: 25px;
+    border-bottom-right-radius: 25px;
+}
+.intro {
+    text-align: center;
+    color: #F5E023;
+    font-weight: 600;
+    padding: 20px;
+    margin: auto;
+    width: 50%;
+    
+}
