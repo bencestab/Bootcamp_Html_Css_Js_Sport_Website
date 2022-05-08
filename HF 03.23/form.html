@@ -6,65 +6,46 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Foglalás</title>
-
     <link rel="stylesheet" href="css/style.css">
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
     <link rel="icon" type="image" href="img/Logo.png">
-
     <link href='https://ajax.googleapis.com/ajax/libs/jqueryui/1.12.1/themes/ui-lightness/jquery-ui.css'
         rel='stylesheet'>
-
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js">
     </script>
-
     <script src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.12.1/jquery-ui.min.js">
     </script>
-
-
-
-
-
 </head>
 
 <body>
     <script>
         $(document).ready(function () {
-
             $(function () {
                 $("#my_date_picker").datepicker();
             });
         })
-
     </script>
-
     <header>
         <form>
             <input type="button" id="back_button" value="Vissza az előző oldalra" onclick="history.back()">
         </form>
     </header>
-
     <section>
-
-
         <form action="" method="get">
             <h1 class="h1mid"> Feliratkozás</h1>
             <div class="form_container">
-
                 <div>
-                    <label for="lname">Vezetéknév:</label>
-                    <input type="text" id="lname" name="lname">
+                    <label for="last_name">Vezetéknév:</label>
+                    <input type="text" id="last_name" name="last_name">
                 </div>
-
                 <div>
-                    <label for="fname">Keresztnév:</label>
-                    <input type="text" id="fname" name="fname">
+                    <label for="first_name">Keresztnév:</label>
+                    <input type="text" id="first_name" name="first_name">
                 </div>
-
                 <div>
                     <label for="email">E-mail cím:</label>
                     <input type="text" id="email" name="email">
                 </div>
-
                 <div>
                     <p>
                         A feliratkozom gomb megnyomásával elismerem, hogy elolvastam, megértettem és elfogadom az
@@ -82,15 +63,11 @@
                         visszavonására az adatvédelmi tájékoztatóban foglaltak szerint van lehetőségem.</label>
                     <input type="checkbox" id="checkbox" name="checkbox">
                 </div>
-
-
                 <div>
-                    <input type="submit" id="back_button"  value="Feliratkozom">
+                    <input type="submit" id="back_button" value="Feliratkozom">
                 </div>
-
             </div>
         </form>
-
     </section>
 </body>
 

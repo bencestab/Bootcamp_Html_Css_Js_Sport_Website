@@ -5,34 +5,43 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Sporthírek</title>
+    <title>SB_Sporthírek</title>
     <link rel="stylesheet" href="css/style.css">
-
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
-
     <link rel="icon" type="image" href="img/Logo.png">
-    <script src="animations.js"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Oswald&family=Roboto&display=swap" rel="stylesheet">
 </head>
 
 
 
 
 <body>
+    <div class="header_name">
+        <div class="header_name_1"><i class="material-icons" style="color: rgb(255, 10, 0);">feed</i> SB_Sporthírek
+        </div>
+        <div class="header_name_2">
+            <i class="material-icons">sports_handball</i>
+            <i class="material-icons">sports_football</i>
+            <i class="material-icons">sports_volleyball</i>
+            <i class="material-icons">sports_basketball</i>
+        </div>
+    </div>
     <div class="intro">
-        <h1>SB Sporthírek.</h1>
-        <h2>"Az összes sporthír egy helyen..."</h2>
-        <p>Ha minden sporttal kapcsolatos hírt egy helyen szeretnél olvasni...</p>
+        <h2 style="padding: 20px;">A sporthírek aranybányája</h2>
+        <p>"...percről percre frissülő híreinkkel mindig tudni fogod mi történik a sportvilágban..."</p>
+        <p>"...ha minden sporttal kapcsolatos hírt egy helyen szeretnél olvasni..."</p>
+        <h2 style="padding-top: 60px;">Heti hírösszefoglaló:</h2>
     </div>
     <div class="video">
-        <iframe width="100%" height="700" src="https://www.youtube.com/embed/gvLPx3XMZl4?start=1"
-            title="YouTube video player" frameborder="0"
+        <iframe style="border-top-left-radius: 25px; border-top-right-radius: 25px;" width="100%" height="700"
+            src="https://www.youtube.com/embed/gvLPx3XMZl4?start=1" title="YouTube video player" frameborder="0"
             allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
             allowfullscreen></iframe>
-
     </div>
     <header>
         <div class="grid">
-            <div class="logo"><i class="material-icons">feed</i> SBsporthírek</div>
             <nav>
                 <ul>
                     <li><a href="#football">Labdarúgás</a></li>
@@ -42,7 +51,6 @@
                     <li><a href="form.html">Feliratkozás</a></li>
                 </ul>
             </nav>
-        </div>
     </header>
     <section>
         <div id="football" class="football-articles">
@@ -114,18 +122,15 @@
                 </div>
             </div>
         </div>
-
         <script type="text/javascript">
             window.addEventListener("scroll", function () {
                 var scroll = document.querySelector(".football-articles");
                 scroll.classList.toggle("active", window.scrollY > 500)
             })
         </script>
-
         <div id="handball" class="handball-articles">
             <div class="grid">
                 <h1>Kézilabda</h1>
-
                 <div class="box1">
                     <a class="article-image"
                         href="https://www.thueringer-allgemeine.de/sport/steigerung-bringt-ungefaehrdeten-auswaertssieg-id222139349.html"
@@ -141,7 +146,6 @@
                         teilweise hart von Weimars Abwehr gestoppt.
                     </p>
                 </div>
-
                 <div class="box2">
                     <a class="article-image"
                         href="https://www.thueringer-allgemeine.de/sport/muehlhaeuser-handballer-gegen-zehnten-zurueck-in-der-spur-id222422843.html"
@@ -158,7 +162,6 @@
                         Könitz/Saalfeld
                     </p>
                 </div>
-
                 <div class="box3">
                     <a class="article-image"
                         href="https://www.nemzetisport.hu/kezilabda/ferfi-kezi-mk-a-veszprem-40-et-dobott-a-fradinak-es-tovabbjutott-2883081"
@@ -190,11 +193,9 @@
                 scroll.classList.toggle("active", window.scrollY > 1650)
             })
         </script>
-
         <div id="volleyball" class="volleyball-articles">
             <div class="grid">
                 <h1>Röplabda</h1>
-
                 <div class="box">
                     <a class="article-image"
                         href="https://www.nemzetisport.hu/roplabda/ferfi-roplabda-sorozatban-harmadszor-is-a-penzugyor-a-kupagyoztes-2881615"
@@ -211,7 +212,6 @@
                         trófeát, míg Jókay Zoltán immár tizenegyedik alkalommal volt kupagyőztes csapat vezetőedzője.
                     </p>
                 </div>
-
                 <div class="box">
                     <a class="article-image"
                         href="https://www.nemzetisport.hu/roplabda/noi-roplabda-eb-kozelebb-kerulhet-az-elithez-a-magyar-valogatott-2847251"
@@ -232,7 +232,6 @@
                         néhányat, és elkezdték azt játszani, amire készültek, méltó ellenfelei voltak a világbajnoknak.
                     </p>
                 </div>
-
                 <div class="box">
                     <a class="article-image"
                         href="https://www.nemzetisport.hu/roplabda/strandropi-ob-hajosek-eloszor-vecseyek-masodszor-nyertek-2778381"
@@ -261,25 +260,21 @@
         <div id="moresports" class="moresports-articles">
             <div class="grid">
                 <h1>További sportok...</h1>
-
                 <div class="box">
                     <a class="article-category" href="https://www.nemzetisport.hu/f1" target="blank">Formula-1</a>
                     <a class="article-title"
                         href="https://www.nemzetisport.hu/f1/f1-magnussen-tarolt-russell-visszaadna-a-mercedest-bottasnak-2882907"
                         target="blank">Magnussen tarolt; Russell visszaadná a Mercedest Bottasnak?</a>
-
                     <a class="article-category" href="https://www.nemzetisport.hu/nso_cimkeoldal/?cimke=darts"
                         target="blank">Darts</a>
                     <a class="article-title"
                         href="https://www.nemzetisport.hu/egyeb_egyeni/darts-pl-uj-lebonyolitas-minden-heten-gyoztest-avatnak-2870695"
                         target="blank">Darts PL.Új lebonyolítás, minden héten győztest avatnak</a>
-
                     <a class="article-category" href="https://www.nemzetisport.hu/vizilabda"
                         target="blank">Vízilabda</a>
                     <a class="article-title"
                         href="https://www.nemzetisport.hu/vizilabda/ferfi-vizi-ob-i-a-cimvedo-szolnok-legyozte-az-ellovas-ftc-t-2882609"
                         target="blank">Férfi vízi ob I: a címvédő Szolnok legyőzte az éllovas FTC-t</a>
-
                     <a class="article-category" href="">Sakk</a>
                     <a class="article-title" href="">Lorem ipsum dolor sit amet.</a>
                 </div>
@@ -289,19 +284,16 @@
                     <a class="article-title"
                         href="https://www.nemzetisport.hu/egyeb_egyeni/mma-borics-megnyerte-elete-elso-bellator-fomeccset-2881481"
                         target="blank">Borics megnyerte élete első Bellator-főmeccsét</a>
-
                     <a class="article-category" href="https://www.nemzetisport.hu/jegkorong"
                         target="blank">Jégkorong</a>
                     <a class="article-title"
                         href="https://www.nemzetisport.hu/jegkorong/erste-liga-megutottek-az-ftc-edzojet-a-gyergyoi-hk-legyozese-utan-2882827"
                         target="blank">Erste Liga: megütötték az FTC edzőjét a Gyergyói HK legyőzése után</a>
-
                     <a class="article-category" href="https://www.nemzetisport.hu/kosarlabda"
                         target="blank">Kosárlabda</a>
                     <a class="article-title"
                         href="https://www.nemzetisport.hu/kosarlabda/kosarlabda-raksanyi-krisztina-lemondta-a-valogatottsagot-2883195"
                         target="blank">Raksányi Krisztina lemondta a válogatottságot</a>
-
                     <a class="article-category" href="https://www.nemzetisport.hu/tenisz" target="blank">Tenisz</a>
                     <a class="article-title"
                         href="https://www.nemzetisport.hu/tenisz/tenisz-medvegyev-tudja-mi-kell-a-vilagelsoseg-visszaszerzesehez-2881833"
@@ -313,43 +305,40 @@
                         scroll.classList.toggle("active", window.scrollY > 3600)
                     })
                 </script>
-
             </div>
         </div>
-
-        <footer>
-
-            <div class="grid">
-                <div class="logo"><i class="material-icons">feed</i>SBsporthírek</div>
-
-                <div class="map">
-                    <iframe class="frame"
-                        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2658.042689398859!2d20.255695415549432!3d48.225052553043476!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x473f8749242a1ee9%3A0xfc0e17f625ecb042!2zw5N6ZCwgw5pqdsOhcm9zIHTDqXIgNCwgMzYwMCBNYWd5YXJvcnN6w6Fn!5e0!3m2!1shu!2sch!4v1651242416981!5m2!1shu!2sch"
-                        width="100%" height="250" style="border:0;" allowfullscreen="" loading="lazy"
-                        referrerpolicy="no-referrer-when-downgrade"></iframe>
+    </section>
+    <footer>
+        <div class="grid">
+            <div class="logo"><i class="material-icons" style="color: rgb(255, 10, 0)">feed</i>SBsporthírek</div>
+            <div class="map">
+                <iframe class="frame"
+                    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2658.042689398859!2d20.255695415549432!3d48.225052553043476!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x473f8749242a1ee9%3A0xfc0e17f625ecb042!2zw5N6ZCwgw5pqdsOhcm9zIHTDqXIgNCwgMzYwMCBNYWd5YXJvcnN6w6Fn!5e0!3m2!1shu!2sch!4v1651242416981!5m2!1shu!2sch"
+                    width="100%" height="200" style="border:0;" allowfullscreen="" loading="lazy"
+                    referrerpolicy="no-referrer-when-downgrade"></iframe>
+            </div>
+            <div class="bungary">
+                <div style="text-transform: lowercase;">
+                    <i class="material-icons" style="color: rgb(255, 10, 0)">hub</i> <br>
+                    github.com/bencestab/bencestab.github.io
                 </div>
-                <div class="bungary">
-                    <div style="text-transform: lowercase;"> 
-                        <i class="material-icons">hub</i> <br> github.com/bencestab/bencestab.github.io
-                    </div>
-                    <div>
-                        <i class="material-icons">phone_iphone</i> <br> +36 70 639 00 05
-                    </div>
-
-                    <div style="text-transform: lowercase;">
-                        <i class="material-icons">alternate_email</i> <br> stabbence@gmail.com
-                    </div>
+                <div>
+                    <i class="material-icons" style="color: rgb(255, 10, 0)">phone_iphone</i> <br> +36 70 639 00 05
+                </div>
+                <div style="text-transform: lowercase;">
+                    <i class="material-icons" style="color: rgb(255, 10, 0)">alternate_email</i> <br>
+                    stabbence@gmail.com
                 </div>
             </div>
-        </footer>
-        <a class="gotopBtn" href="#"><i class="material-icons">arrow_upward</i></a>
-
-        <script type="text/javascript">
-            window.addEventListener("scroll", function () {
-                var scroll = document.querySelector(".gotopBtn");
-                scroll.classList.toggle("active", window.scrollY > 500)
-            })
-        </script>
+        </div>
+    </footer>
+    <a class="gotopBtn" href="#"><i class="material-icons">arrow_upward</i></a>
+    <script type="text/javascript">
+        window.addEventListener("scroll", function () {
+            var scroll = document.querySelector(".gotopBtn");
+            scroll.classList.toggle("active", window.scrollY > 500)
+        })
+    </script>
 </body>
 
 </html>
