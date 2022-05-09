@@ -26,7 +26,7 @@ img:hover {
 .header_name {
     display: grid;
     padding: 10px;
-    background-color: rgb(255, 211, 0);
+    background-color: rgba(255, 213, 0, 0.9);
     color: #000000;
     align-items: center;
     grid-template-columns: 1fr 1fr;
@@ -41,6 +41,14 @@ img:hover {
     margin: 10px;
     justify-self: end;
 }
+.intro {
+    text-align: center;
+    color: rgb(255, 211, 0);
+    font-weight: 600;
+    padding: 20px;
+    margin: auto;
+    width: 70%;
+}
 h1 {
     display: block;
     text-align: center;
@@ -51,12 +59,14 @@ h1 {
     text-transform: uppercase;
 }
 header {
-    background: rgb(255, 211, 0);
+    background: rgba(255, 211, 0 , 0.9);
     color: #000000;
     box-shadow: 0 30px 40px -20px rgba(0, 0, 0, .5);
     position: sticky;
     top: 0;
     z-index: 98;
+    border-bottom-left-radius: 25px;
+    border-bottom-right-radius: 25px;
 }
 header .grid {
     align-items: center;
@@ -84,9 +94,10 @@ header nav ul {
     display: flex;
     flex-flow: row wrap;
     list-style: none;
+    line-height: 26px;
 }
 header nav ul li {
-    margin: 0 40px;
+    margin: 0px 40px;
 }
 .grid {
     display: grid;
@@ -96,18 +107,28 @@ header nav ul li {
     grid-template-columns: repeat(12, 1fr);
     grid-template-rows: auto;
     gap: 30px;
+    transition: 1s;
 }
-@media(max-width:950px) {
+.box,
+.box1,
+.box2,
+.box3 {
+    background-color: rgba(196, 145, 2, 0.2);
+    border-radius: 25px;
+    padding: 10px;
+    line-height: 23px;
+}
+@media(max-width:1100px) {
     header .grid {
         grid-row-gap: 0;
     }
-    header .logo {
+    
+    header nav ul{
         grid-column: span 12;
-        text-align: center;
+        justify-content: center;
     }
-    header nav {
-        grid-column: span 12;
-        justify-self: center;
+    header nav ul li {
+        margin: 5px 40px;
     }
 }
 @media(max-width:950px) {
@@ -206,8 +227,11 @@ header nav ul li {
     }
 }
 footer {
-    background: rgb(255, 211, 0);
-    padding: 30px 0;
+    background: rgba(255, 211, 0, 0.9);
+    padding: 10px 0;
+    margin-top: 20px;
+    border-top-left-radius: 25px;
+    border-top-right-radius: 25px;
 }
 footer .grid {
     align-items: center;
@@ -223,9 +247,8 @@ footer .logo {
     grid-column: span 6;
 }
 footer .bungary {
-    padding-left: 350px;
     grid-column: span 3;
-    justify-self: end;
+    justify-self: center;
     color: black;
     text-transform: uppercase;
 }
@@ -236,17 +259,18 @@ footer .bungary {
     padding-right: 0 30px;
     color: black;
 }
-@media(max-width:900px) {
+@media(max-width:1200px) {
     footer .logo {
         grid-column: span 12;
-        place-self: center;
+        justify-self: center;
     }
     footer .map {
         grid-column: span 12;
     }
     footer .bungary {
         grid-column: span 12;
-        place-self: center;
+        justify-self: center;
+        text-align: center;
     }
 }
 .article-title {
@@ -256,7 +280,7 @@ footer .bungary {
     font-size: 19px;
     color: rgb(255, 211, 0);
     transition: 0.5s;
-    ;
+    padding: 5px 0 5px 0;
 }
 .article-title:hover {
     color: rgb(196, 145, 2);
@@ -264,14 +288,17 @@ footer .bungary {
 
 }
 .article-category {
-    background: rgba(196, 145, 2, 0.5);
+    background: rgba(255,211,0 ,0.8);
     color: black;
     text-decoration: none;
     text-transform: uppercase;
     padding: 2px 5px;
     font-weight: 600;
     display: inline-block;
-    margin: 0 0 5px 0;
+    margin: 5px 0 5px 0;
+}
+.article-category:hover {
+    background-color: rgb(255, 211, 0);
 }
 .article-image {
     display: block;
@@ -281,9 +308,12 @@ footer .bungary {
     margin: 0 0 5px 0;
 }
 .moresports-articles .article-title {
-    font-size: 16px;
+    font-size: 18px;
     margin: 0 0 10px 0;
     color: white;
+}
+.moresports-articles .article-title:hover {
+    color: rgb(196, 145, 2);
 }
 .gotopBtn {
     position: fixed;
@@ -346,42 +376,6 @@ form .checkbox {
 }
 #GDPR {
     color: white;
-}
-.box,
-.box1,
-.box2,
-.box3 {
-    background-color: rgba(196, 145, 2, 0.2);
-    border-radius: 25px;
-    padding: 10px;
-}
-footer {
-    margin-top: 20px;
-    border-top-left-radius: 25px;
-    border-top-right-radius: 25px;
-}
-header {
-    border-bottom-left-radius: 25px;
-    border-bottom-right-radius: 25px;
-}
-.intro {
-    text-align: center;
-    color: rgb(255, 211, 0);
-    font-weight: 600;
-    padding: 20px;
-    margin: auto;
-    width: 50%;
-
-}
-.edge {
-    border-top-left-radius: 25px;
-    border-top-right-radius: 25px;
-    display: block;
-    width: 30%;
-    padding-left: 50px;
-    margin: 10 10 0 10;
-    background-color: rgb(255, 211, 0);
-    color: black;
 }
 video {
     margin-bottom: 0;
